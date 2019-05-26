@@ -6,7 +6,7 @@
 
     <groupId>nl.hu.sie.bep.friendspammer</groupId>
     <artifactId>opdracht03-nick</artifactId>
-    <version>1.2</version>
+    <version>1.3</version>
 
     <build>
         <plugins>
