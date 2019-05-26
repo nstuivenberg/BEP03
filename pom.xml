@@ -65,11 +65,11 @@
     <distributionManagement>
         <repository>
             <id>packagecloud-nstuivenberg</id>
-            <url>packagecloud+https://packagecloud.io/nstuivenberg/beppie</url>
+            <url>packagecloud+https://packagecloud.io/nstuivenberg/bep</url>
         </repository>
         <snapshotRepository>
             <id>packagecloud-nstuivenberg</id>
-            <url>packagecloud+https://packagecloud.io/nstuivenberg/beppie</url>
+            <url>packagecloud+https://packagecloud.io/nstuivenberg/bep</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
