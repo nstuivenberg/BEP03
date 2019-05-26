@@ -9,8 +9,12 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class EmailSender {
+
+	private static Logger logger = LoggerFactory.getLogger(EmailSender.class);
 
 	private EmailSender(){}
 
@@ -49,7 +53,7 @@ public class EmailSender {
 			MongoSaver.saveEmail(to, "spammer@spamer.com", subject, messageBody, asHtml);
 
 		} catch (MessagingException e) {
-			throw new RuntimeException(e);
+			logger.error("Error send e-mail.", e);
 		}
 	}
 
@@ -61,12 +65,13 @@ public class EmailSender {
 		props.put("mail.smtp.auth", "true");
 
 		String username = "c8b36f152fddae";
-		String password = "823d4a128104d1";
+		String geheim = "823d4a128104d1";
 
 		Session session = Session.getInstance(props,
 				new javax.mail.Authenticator() {
+			@Override
 					protected PasswordAuthentication getPasswordAuthentication() {
-						return new PasswordAuthentication(username, password);
+						return new PasswordAuthentication(username, geheim);
 					}
 				});
 		try {
@@ -86,11 +91,11 @@ public class EmailSender {
 				}
 				Transport.send(message);
 
-				System.out.println("Done");
+				logger.info("Managed to send the message.");
 			}
 
 		} catch (MessagingException e) {
-			throw new RuntimeException(e);
+			logger.error("Error send e-mail.", e);
 		}
 	}
 
