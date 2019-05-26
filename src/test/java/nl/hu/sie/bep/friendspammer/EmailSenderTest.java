@@ -9,6 +9,6 @@ public class EmailSenderTest {
 
     @Test
     public void test_fail() {
-        //assertTrue(false);
+        assertTrue(true);
     }
 }

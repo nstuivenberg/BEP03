@@ -9,11 +9,13 @@ import com.mongodb.client.MongoDatabase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class MongoSaver {
+class MongoSaver {
+
+    private MongoSaver() {}
 
     private static Logger logger = LoggerFactory.getLogger(MongoSaver.class);
 
-    public static boolean saveEmail(String to, String from, String subject, String text, Boolean html) {
+    static boolean saveEmail(String to, String from, String subject, String text, Boolean html) {
         String database = "friendspammer";
 
 
