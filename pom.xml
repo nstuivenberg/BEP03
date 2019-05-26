@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>nl.hu.bep.opdracht03.stuif</groupId>
+    <groupId>nl.hu.sie.bep.friendspammer</groupId>
     <artifactId>opdracht03-nick</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 
     <build>
         <plugins>
@@ -65,11 +65,11 @@
     <distributionManagement>
         <repository>
             <id>packagecloud-nstuivenberg</id>
-            <url>packagecloud+https://packagecloud.io/test-user/myrepo</url>
+            <url>packagecloud+https://packagecloud.io/nstuivenberg/beppie</url>
         </repository>
         <snapshotRepository>
             <id>packagecloud-nstuivenberg</id>
-            <url>packagecloud+https://packagecloud.io/test-user/myrepo</url>
+            <url>packagecloud+https://packagecloud.io/nstuivenberg/beppie</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
