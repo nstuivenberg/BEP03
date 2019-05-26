@@ -12,6 +12,8 @@ import javax.mail.internet.MimeMessage;
 
 public class EmailSender {
 
+	private EmailSender(){}
+
 	public static void sendEmail(String subject, String to, String messageBody, boolean asHtml) {
 
 		Properties props = new Properties();
@@ -20,12 +22,13 @@ public class EmailSender {
 		props.put("mail.smtp.auth", "true");
 
 		String username = "c8b36f152fddae";
-		String password = "823d4a128104d1";
+		String geheim = "823d4a128104d1";
 
 		Session session = Session.getInstance(props,
 				new javax.mail.Authenticator() {
+					@Override
 					protected PasswordAuthentication getPasswordAuthentication() {
-						return new PasswordAuthentication(username, password);
+						return new PasswordAuthentication(username, geheim);
 					}
 				});
 		try {
